@@ -94,8 +94,8 @@ i {
 
 /*header */
 
-.header {
-background-image: url("./img/header.jpg");
+header {
+background-image: url("./img/header.jpeg");
 background-repeat: no-repeat;
 background-size: cover;
 background-position: 50% 50%;
