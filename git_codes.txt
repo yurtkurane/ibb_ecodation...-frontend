@@ -10,4 +10,29 @@ git commit -m "second commit"
 git push
 
 git reset HEAD~
+git add .
+git commit -m "conflict sonrası"
+git push --force
 
+git status
+git log 
+git checkout commitID
+git clone URL 
+git pull 
+
+
+git stash
+git stash save "benim"
+git stash list
+git stash pop ---> stash i siliyor
+
+
+NOT: branch öncesinde git add, commit, push yapalım
+git branch -M main
+git branch -v
+git backend
+git branch -a
+git branch -D backend ---> siliyor tekrar
+git checkout backend ---> mainden backend e geçiliyor. diğerleri görmüyor
+git checkout main ---> yapınca ana klasöre dönüyor
+git merge backend ---> main e geçip yazman gerekiyor
