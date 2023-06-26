@@ -57,7 +57,14 @@ i {
     display: block;
     clear: both;
 }
-
+.myHeading {
+    text-align: center;
+    text-decoration: underline;
+    marrgin-bottom: 02rem;
+    text-transform: uppercase;
+    text-shadow: 0.4px -0.9px rgba(0,0,0,0.9);
+    opacity: 0.8;
+}
 /* my special size*/
 .fSize1 {
     font-size: 1rem; /* 15*1 */
@@ -73,9 +80,9 @@ i {
 }
 
 /* line clamp */
-.line-clamp5{
+.line-clamp4{
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 4;
     display: -webkit-box;
     overflow: hidden;
     
@@ -115,6 +122,18 @@ height:80vh;
 padding-top:4rem;
 }
 
+/*main id*/
+
+#messages{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+}
+
+#messages i{
+    color: blue;
+    font-size: 5rem;
+}
 /*footer*/
 
 footer {min-height: 10rem;
