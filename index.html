@@ -25,6 +25,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"/>
 
+   <!-- jquery  -->
+   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- external CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -52,24 +58,27 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
                 </li>
-                <li class="nav-item dropdown">
+              <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
+                      <i class="fa-regular fa-user" text-primary></i>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#loginID">Login</a></li>
+                    <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#registerID">Register</a></li>
                     <li>
                       <hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-            </li>
+              </li>
+            
+        </ul>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <button class="btn btn-primary" onclick="darkModu()"> <i class="fa-sharp fa-regular fa-moon"></i></button>
+          </li> 
         </ul>
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Arama İçin ..." aria-label="Search">
+          <input id="tags" class="form-control me-2" type="search" placeholder="Arama İçin ..." aria-label="Search">
           <button class="btn btn-primary" type="submit">Ara</button> <!-- btn-outline-success
           -->
         </form>
@@ -81,7 +90,6 @@
   <!-- start header codes -->
   <header id="header_id">
       <!--  div.text-white>div.container>div.p-5.text-uppercase.display-4{Frontend Eğitimimize Hoşgeldiniz}+h4{Html5 Css3 JS React}+a.btn.btn-primary+a.btn.btn-danger+a.btn.btn-success -->
-      <header id="header_id">
         <div class="text-black">
             <div class="container text-center">
                 <div class="p-5 text-uppercase display-4">Frontend Eğitimimize Hoşgeldiniz</div>
@@ -94,15 +102,181 @@
   </header>
   <!-- end header codes -->
 
+  
+  <!-- Login -->
+  <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+  <div class="modal fade" id="loginID" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitleId">Login</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input type="email" id="form2Example1" class="form-control" />
+              <label class="form-label" for="form2Example1">Email address</label>
+            </div>
+          
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <input type="password" id="form2Example2" class="form-control" />
+              <label class="form-label" for="form2Example2">Password</label>
+            </div>
+          
+            <!-- 2 column grid layout for inline styling -->
+            <div class="row mb-4">
+              <div class="col d-flex justify-content-center">
+                <!-- Checkbox -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="form2Example34" checked />
+                  <label class="form-check-label" for="form2Example34"> Remember me </label>
+                </div>
+              </div>
+          
+              <div class="col">
+                <!-- Simple link -->
+                <a href="#!">Forgot password?</a>
+              </div>
+            </div>
+          
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+          
+            <!-- Register buttons -->
+            <div class="text-center">
+              <p>Not a member? <a href="#!">Register</a></p>
+          
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Register -->
+  <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+  <div class="modal fade" id="registerID" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitleId">Register</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <!-- 2 column grid layout with text inputs for the first and last names -->
+            <div class="row mb-4">
+              <div class="col">
+                <div class="form-outline">
+                  <input type="text" id="form3Example1" class="form-control" />
+                  <label class="form-label" for="form3Example1">First name</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-outline">
+                  <input type="text" id="form3Example2" class="form-control" />
+                  <label class="form-label" for="form3Example2">Last name</label>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input type="email" id="form3Example3" class="form-control" />
+              <label class="form-label" for="form3Example3">Email address</label>
+            </div>
+          
+            <!-- Create Password input -->
+            <div class="form-outline mb-4">
+              <input type="password" id="form3Example4" class="form-control" />
+              <label class="form-label" for="form3Example4"> Create Password</label>
+            </div>
+              <!-- Confirm Password input -->
+              <div class="form-outline mb-4">
+                <input type="password" id="form3Example4" class="form-control" />
+                <label class="form-label" for="form3Example4">Confirm Password</label>
+              </div>
+          
+         
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+          
+            <!-- Register buttons -->
+            <div class="text-center">
+      
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
   <!-- start main codes -->
   <main id="main">
+    <section>
+      <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus error in dicta dolorum laborum. Quam aperiam suscipit porro odit praesentium magnam doloremque nihil possimus perferendis error adipisci quos, explicabo itaque!
+      Repellendus commodi perspiciatis modi officia, minima facere natus voluptatibus quibusdam, recusandae esse perferendis maxime error necessitatibus tempora ea! Repellendus maxime quia corporis. Illum quam id expedita corrupti quas excepturi laudantium.
+      Perferendis velit maiores adipisci ab fugit blanditiis facilis aperiam voluptates quidem! Magni soluta cupiditate nihil dolore aperiam esse, perferendis tempora alias accusantium molestias est? Architecto placeat aliquid rem eaque fugit.
+      Accusamus odit magni eligendi architecto delectus, distinctio illo eos qui laborum labore minima eaque doloremque in sunt nobis magnam molestiae, praesentium consequatur hic soluta unde neque maxime voluptatibus! Facilis, quod?
+      Eum itaque beatae totam deleniti ducimus eius recusandae, nemo ea mollitia culpa veritatis officia aut tempora, vitae quia laudantium numquam dolorem at eos illo doloribus repellat quidem. Eos, pariatur dicta.
+      Et animi consequatur dolorem ipsum accusamus quo vero veritatis aut quis qui. Quaerat quisquam quas eum architecto sunt delectus officiis. Rem tempore ducimus iste, reiciendis exercitationem eos temporibus corporis alias?
+      Voluptates unde recusandae incidunt. Fuga minima quos nemo, ipsam quisquam magni impedit consequatur hic sit. Dolor sunt error culpa velit ipsam dolore, tenetur, inventore aliquam nesciunt atque deserunt, delectus excepturi!
+      Rem, minima itaque consequatur nostrum nobis cum placeat recusandae magni voluptas praesentium perspiciatis quas aperiam accusantium voluptate necessitatibus. Labore aliquid voluptatem corporis ipsam est? Soluta minus temporibus error veniam quibusdam?
+      Ad voluptatum iste architecto minus fugiat reprehenderit debitis. Amet natus mollitia laborum sapiente harum, voluptas temporibus quaerat tempore neque impedit! Quam reprehenderit commodi doloremque dolor mollitia ex alias tempora incidunt?
+      Molestiae saepe consectetur incidunt debitis suscipit fugit impedit commodi, qui, nihil, illo non nisi! Adipisci odit asperiores nobis similique sit? Nam repudiandae corrupti perspiciatis atque fugiat eaque saepe dignissimos hic?
+      Ipsam minus tempora molestiae dolores expedita nulla et aliquam vel doloribus alias iste sapiente similique laborum, sint maxime, unde modi laudantium amet aut neque libero deleniti, provident veritatis accusantium! Cupiditate!
+      Tenetur eius, tempore quisquam ipsum animi voluptate corrupti nostrum non aliquam veritatis pariatur eligendi possimus et minima culpa! Aliquid veniam ab reprehenderit adipisci sapiente dolores iure alias nobis vero quod.
+      Harum quidem tempore maiores nulla? Ratione, deserunt voluptatibus. Unde fuga consequuntur incidunt numquam aliquid quae dolorum culpa sint ducimus dolores eum sit dignissimos tempore reprehenderit, earum magni voluptas. Cum, eum.
+      Hic dolore quia sequi dolores, laborum dolorum aspernatur nobis itaque. Nesciunt animi eaque repellendus vero natus illum quasi error corporis distinctio. Beatae quia omnis dolore doloribus recusandae, vitae vel quis.
+      Quibusdam vitae earum beatae recusandae ducimus sequi inventore, mollitia cumque officiis voluptatum a saepe natus dolore veniam error, sed harum, ab explicabo laboriosam eveniet eius iste possimus quas. Odio, pariatur!
+      At eos vero cum qui reiciendis doloremque necessitatibus blanditiis quaerat veniam, dolore, quia tenetur? Dolorem praesentium, ex veritatis deserunt adipisci et dolor. Consequatur natus cupiditate necessitatibus quos ducimus modi laborum?
+      Impedit cum architecto rem similique. Hic incidunt eligendi rerum explicabo voluptates, tempora iusto ullam labore sunt! Voluptates maxime officiis mollitia! Labore ducimus sunt pariatur sequi, facilis optio atque repudiandae quas?
+      Aliquam, ex. Inventore culpa eius iure velit doloremque repellat assumenda corporis harum beatae rerum, laborum illo nemo fugiat soluta dignissimos possimus tempora suscipit? Iste perspiciatis illo maxime commodi quos vitae.
+      Eius aperiam minima libero rem asperiores. Cupiditate, non minus officia, dolore deserunt optio autem excepturi officiis sint quasi nobis quia dolor tenetur modi eligendi, labore maiores natus tempora? Sequi, autem?
+      Nobis numquam perspiciatis voluptate aperiam eligendi. Reiciendis suscipit fugiat officia fuga quibusdam, quidem, nobis praesentium nesciunt mollitia explicabo, nisi dicta debitis. Laboriosam vitae voluptates modi pariatur odit soluta tempore corporis.
+      Totam dolore quis molestias, possimus cupiditate minus incidunt repudiandae vitae, magni distinctio cum assumenda a. Atque quisquam in, inventore omnis vero est nemo, et animi maxime, illo iusto? Obcaecati, tempore!
+      Possimus consequatur eligendi aliquid distinctio, laboriosam deserunt cum tempora facere ullam, tenetur rem, dolore similique corrupti cumque delectus incidunt aut error quisquam dolorem nostrum totam tempore ratione! Dolore, quos dicta!
+      Enim nihil delectus laborum sequi suscipit accusamus dicta ipsum, illo eum cupiditate possimus quae quibusdam vitae consequatur ut eos inventore. Maxime, ratione minima odit provident at magnam iusto quasi mollitia?
+      Delectus, sapiente unde rem quas hic in! Exercitationem ullam vel quisquam? Aliquid amet, dolores, totam ullam est asperiores ipsam exercitationem minus, eum sunt nihil autem rerum inventore quae architecto voluptatem.
+      Nihil, quibusdam? Ex assumenda, numquam architecto amet at quia ab illum alias totam vero omnis quidem harum voluptas? Aperiam sit aut possimus dicta impedit ab deleniti est distinctio ipsam quas?
+      Nisi rem numquam quae deserunt obcaecati, eum minima consectetur tenetur odio cum, iusto quasi ducimus placeat? Sequi numquam fugiat asperiores eligendi delectus nostrum facilis assumenda ut voluptatem eum? Neque, a!
+      Beatae natus debitis error quidem ea molestiae illo perspiciatis animi pariatur ullam! Praesentium quibusdam totam voluptatem unde fuga odio consequuntur doloremque deleniti omnis! Similique voluptatibus quidem, illum eum adipisci fugit.
+      Inventore vero maxime quae, quas odio nihil tempora, distinctio repellendus asperiores ad id aperiam! Ab ex veniam ipsa, velit nostrum quibusdam nulla quas in et at, praesentium ea assumenda beatae.
+      Voluptatum at officia iusto dolores vel, dolore perferendis ullam labore corporis nam quos aperiam delectus ipsam totam tempora aut, eum harum illum, officiis doloremque accusantium laudantium repellendus error. Aut, quasi!
+      Commodi, fugit atque, explicabo ab natus necessitatibus illo nihil provident voluptatum, minima doloribus quaerat? Dignissimos deleniti accusantium, vero voluptatibus nisi illo dolorum cupiditate perferendis beatae sit hic, voluptates natus id!
+      Sit aliquam nemo quis nulla quidem consequatur molestias ullam natus provident accusantium cum rem animi hic et ducimus, voluptatem enim ex voluptate nobis, magnam at assumenda, nisi mollitia sint! Esse.
+      Voluptatibus, aut est iure vitae fuga minus consectetur dolore cupiditate doloremque veritatis quasi. Reiciendis rem sint asperiores maiores porro fuga nulla neque ullam, molestias necessitatibus iste, dicta, vel qui sequi.
+      Dignissimos soluta libero, odio facere expedita quod at quis rem, id veniam repellat quae iure accusantium est non dolore. Consectetur reiciendis quasi, magnam earum incidunt nemo distinctio repudiandae est repellat.
+      Esse ipsa autem cupiditate alias voluptates, sit modi quod inventore molestias maiores magnam aliquam! Recusandae porro blanditiis necessitatibus minus dolorem, reprehenderit, assumenda rem vitae, optio consectetur ad rerum exercitationem voluptas.
+      A harum, animi at asperiores dolores unde recusandae laborum officiis illo ad labore deserunt iste minima? Nihil ad earum nostrum est dicta error sapiente! Qui tempora omnis eaque totam architecto?
+      Odit placeat laudantium dolorem mollitia atque ad cupiditate officiis quas, velit tempora fugiat! Omnis laudantium sunt autem recusandae blanditiis at consequuntur. Cum beatae quaerat adipisci temporibus dolor tenetur neque obcaecati?
+      Architecto magni, quaerat, dolor consequatur veritatis dicta voluptatem necessitatibus aspernatur cupiditate enim minima voluptate quibusdam ratione ipsam labore libero repellendus odit cum culpa sit recusandae placeat laboriosam? Doloremque, quae id!
+      Dolores hic earum nemo provident, aperiam inventore ullam incidunt praesentium assumenda enim, ea nam voluptate eligendi nisi, animi mollitia pariatur? Beatae, cumque repellendus! Error omnis quidem rem placeat sint asperiores?
+      Necessitatibus quod odio impedit eaque, cum delectus nemo rem, beatae debitis nostrum facere aliquam obcaecati dolore, maiores quas id amet placeat ratione cupiditate expedita nulla doloremque saepe accusamus consequatur. Numquam!
+      Dolore magni minus quia perspiciatis harum libero, distinctio quaerat est, aperiam natus eos. Debitis beatae, laudantium facere eveniet numquam, architecto, laboriosam eum quod explicabo voluptate dicta. Quam, accusantium sed! Et.
+      </p>
+    </section>
 
   </main>
   <!-- end main codes -->
 
   <!-- start footer codes -->
-  <footer id="footer"></footer>
+  <footer id="footer id" class="bg-dark">
+   <div class="text-center p-5-dark" id="copy-right">2021- <span id="date_id"></span> &copy; Bütün Hakları Saklıdır</div>
+  </footer>
   <!-- end footer codes -->
+  <a href="navbar_id" id="back_top" class="btn btn-primary"><i class="fa-solid fa-arrow-up-long"></i></a>
 
   <!-- end codes -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

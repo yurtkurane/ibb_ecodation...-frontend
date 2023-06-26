@@ -5,6 +5,10 @@ Version: v1 */
 
 /*####################*/
 /* Root */
+:root{
+    --templateBgColor:rgb(43, 43, 43);
+
+}
 
 /*####################*/
 /* Common Property */
@@ -92,7 +96,14 @@ i {
 }
 /*##################*/
 
-/*header */
+/*Navbar*/
+.dark_mode{
+    background-color: var(--templateBgColor);
+    color: #ffffff;
+}
+
+
+/*header*/
 
 header {
 background-image: url("./img/header.jpeg");
@@ -104,4 +115,20 @@ height:80vh;
 padding-top:4rem;
 }
 
+/*footer*/
 
+footer {min-height: 10rem;
+    width: auto;
+    color: #ffffff;
+}
+
+/*back top*/
+#back_top {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+#back_top:hover{
+    opacity: 0.8;
+}
+    
