@@ -60,7 +60,7 @@ i {
 .myHeading {
     text-align: center;
     text-decoration: underline;
-    marrgin-bottom: 02rem;
+    margin-bottom: 02rem;
     text-transform: uppercase;
     text-shadow: 0.4px -0.9px rgba(0,0,0,0.9);
     opacity: 0.8;
@@ -89,14 +89,21 @@ i {
 }
 .line-clamp8{
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 8;
     display: -webkit-box;
     overflow: hidden;
     
 }
 .line-clamp10{
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 10;
+    display: -webkit-box;
+    overflow: hidden;
+    
+}
+.line-clamp20{
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 20;
     display: -webkit-box;
     overflow: hidden;
     
@@ -122,7 +129,7 @@ height:80vh;
 padding-top:4rem;
 }
 
-/*main id*/
+/*messages*/
 
 #messages{
     margin-top: 3rem;
@@ -133,6 +140,21 @@ padding-top:4rem;
 #messages i{
     color: blue;
     font-size: 5rem;
+}
+
+/*parallax*/
+#parallax {background-color: transparent;
+background-image: url('./img/parallax2.jpeg');
+background-size: cover;
+height: 35rem;
+padding: 2rem;
+background-repeat: no-repeat;
+background-attachment: fixed;
+
+}
+
+#parallax h2,p{
+    color: rgb(27, 20, 20);
 }
 /*footer*/
 
