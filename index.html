@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-  <title> One Page</title>
+  <title> Frontend Egitim</title>
+ 
   <!-- for language -->
   <meta charset="utf-8"/>
 
   <!-- for responsive design -->        
-
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <!-- SEO --> 
@@ -22,26 +22,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Bootstrap CSS v5.2.1 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"/>
 
-   <!-- jquery  -->
-   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- jquery  -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- external CSS -->
+  <link rel="stylesheet" href="style.css">
 
-    <!-- external CSS -->
-    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar_id">
-    <noscript>Bu browser javascripti desteklemiyor.</noscript>
-  <!-- start codes -->
+  <noscript>Bu browser javascripti desteklemiyor.</noscript>
 
-  <!-- start nav codes -->
-  <nav id="navbar_id" class="navbar navbar-expand-lg bg-body-tertiary navbar-dark bg-dark">
-    <div class="container">  <!-- container-fluid -->
+  <!-- START CODES -->
+
+   <!-- start nav codes -->
+   <nav id="navbar_id" class="navbar navbar-expand-lg bg-body-tertiary navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">  <!-- container-fluid -->
       <a class="navbar-brand" href="#"><i class="fa-solid fa-code"></i></a>
       <!-- buttonda redirect yap -->
       <button class="navbar-toggler" type="button" 
@@ -50,62 +51,83 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">Anasayfa</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-              <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fa-regular fa-user" text-primary></i>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#loginID">Login</a></li>
-                    <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#registerID">Register</a></li>
-                    <li>
-                      <hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-            
-        </ul>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <button class="btn btn-primary" onclick="darkModu()"> <i class="fa-sharp fa-regular fa-moon"></i></button>
-          </li> 
-        </ul>
-        <form class="d-flex" role="search">
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Anasayfa</a>
+        </li>
+        <li class="nav-item">
+         <a class="nav-link" href="messages">Çalışmalarımız</a>
+        </li>
+        <li class="nav-item">
+           <a class="nav-link" href="parallax">Hakkımızda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Haberler</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Blog</a>
+        </li>
+      </ul>
+      <form class="d-flex me-2" role="search">
           <input id="tags" class="form-control me-2" type="search" placeholder="Arama İçin ..." aria-label="Search">
-          <button class="btn btn-primary" type="submit">Ara</button> <!-- btn-outline-success
+          <button class="btn btn-light" type="submit">Ara</button> <!-- btn-outline-success
           -->
-        </form>
-      </div>
+      </form>
+      <ul class="navbar-nav mb-2 mb-lg-0" >
+         <li class="nav-item">
+          <button class="btn btn-outline-light" onclick="darkModu()"> <i class="fa-sharp fa-regular fa-moon"></i></button>
+         </li> 
+      </ul>
+      <ul class="navbar-nav me-lg-0 mb-5 mb-lg-0" >
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             <i class="fa-regular fa-user" text-primary></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-lg-end">
+                   <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#loginID">Login</a></li>
+                   <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#registerID">Register</a></li>
+                   <li>
+                     <hr class="dropdown-divider"></li>
+                   <li><a class="dropdown-item" href="#">Something else here</a></li>
+                   <li>
+          </ul>
+       </li>  
+      </ul>
+      <ul class="navbar-nav me-lg-0 mb-5 mb-lg-0" >
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-thin fa-globe" text primary></i>
+         </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+                   <li><a class="dropdown-item" data-bs-toggle="modal">Türkçe</a></li>
+                   <li><a class="dropdown-item" data-bs-toggle="modal">English</a></li>
+       </li>  
+      </ul>
+     </div>
     </div>
-  </nav>
-  <!-- end nav codes -->
+   </nav>
+   <!-- end nav codes -->
 
-  <!-- start header codes -->
-  <header id="header_id">
+   <!-- start header codes -->
+   <header id="header_id">
       <!--  div.text-white>div.container>div.p-5.text-uppercase.display-4{Frontend Eğitimimize Hoşgeldiniz}+h4{Html5 Css3 JS React}+a.btn.btn-primary+a.btn.btn-danger+a.btn.btn-success -->
         <div class="text-black">
             <div class="container text-center">
                 <div class="p-5 text-uppercase display-4">Frontend Eğitimimize Hoşgeldiniz</div>
                 <h4>Html5 Css3 JS React</h4>
                 <a href="" class="btn btn-primary">Linkedin</a>
-                <a href="" class="btn btn-danger">Blog</a>
-                <a href="" class="btn btn-success">Youtube</a>
+                <a href="" class="btn btn-primary">Blog</a>
+                <a href="" class="btn btn-primary">Youtube</a>
             </div>
         </div>
-  </header>
-  <!-- end header codes -->
+   </header>
+   <!-- end header codes -->
 
   
-  <!-- Login -->
-  <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
-  <div class="modal fade" id="loginID" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <!-- Login -->
+    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+   <div class="modal fade" id="loginID" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -157,11 +179,11 @@
         </div>
       </div>
     </div>
-  </div>
+   </div>
 
-  <!-- Register -->
-  <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
-  <div class="modal fade" id="registerID" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <!-- Register -->
+    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+   <div class="modal fade" id="registerID" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -219,13 +241,14 @@
         </div>
       </div>
     </div>
-  </div>
+   </div>
   
 
-  <!-- start main codes -->
-  <main id="main">
+   <!-- start main codes -->
+   <main id="main">
+
     <!-- start message-->
-    <section id="messages">
+     <section id="messages">
       <div>
         <h2 class="myHeading">Çalışmalarımız</h2>
       </div>
@@ -235,40 +258,40 @@
             <i class="fa-brands fa-html5"></i>
             <h4>Html5</h4>
             <p class="line-clamp4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ullam voluptatem repudiandae odio voluptates accusamus doloremque dolor! Accusantium exercitationem culpa tempore sint? Praesentium, quis laudantium. Omnis minus ab pariatur eum!</p>
-            <button class="btn btn-primary">Daha fazla ...</button>
+            <button class="btn btn-outline-dark">Daha fazla ...</button>
           </div>
 
           <div class="text-center col-12 col-md-4 col-xl-3 mb-4">
             <i class="fa-brands fa-css3 text-danger" ></i>
             <h4>Css3</h4>
             <p class="line-clamp4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus quaerat similique quam inventore totam vitae eaque vel consequuntur obcaecati nisi! Eveniet est possimus iusto omnis facilis incidunt fugiat officiis nostrum.</p>
-            <button class="btn btn-primary">Daha fazla ...</button>
+            <button class="btn btn-outline-dark">Daha fazla ...</button>
           </div>
 
           <div class="text-center col-12 col-md-4 col-xl-3 mb-4">
             <i class="fa-brands fa-js text-warning"></i>
             <h4>JavaScript</h4>
             <p class="line-clamp4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque placeat ullam dignissimos officiis officia amet reprehenderit saepe ipsa? Expedita sequi officia vel quae sint vero rem ut hic, cumque voluptatem!</p>
-            <button class="btn btn-primary">Daha fazla ...</button>
+            <button class="btn btn-outline-dark">Daha fazla ...</button>
           </div>
 
           <div class="text-center col-12 col-md-4 col-xl-3 mb-4">
             <i class="fa-brands fa-react text-muted"></i>
             <h4>React JS</h4>
             <p class="line-clamp4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, obcaecati tenetur consectetur ab excepturi iusto tempore et, optio quos nihil facilis amet esse alias praesentium corporis rem fuga perspiciatis pariatur.</p>
-            <button class="btn btn-primary">Daha fazla ...</button>
+            <button class="btn btn-outline-dark">Daha fazla ...</button>
           </div>
           
         </div>
       </div>
-    </section>
+     </section>
     <!-- end message-->
 
     <!-- start parallax-->
     <section id="parallax">
       <div class="container">
         <div class="row">
-          <h2 class="myHeading">Haberler</h2>
+          <h2 class="myHeading">Hakkımızda</h2>
           <p class="line-clamp20">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea alias harum aliquid, natus voluptas ratione, dignissimos perferendis, quasi adipisci corrupti itaque ex consequatur. Velit id magnam nobis nisi corrupti repellat?
           Quae nam ipsam ducimus amet necessitatibus praesentium pariatur, aliquid qui mollitia placeat exercitationem quod magni consequatur quibusdam consequuntur a dolorum iure earum illo doloremque. Blanditiis inventore asperiores dicta aut officia?
           Reprehenderit id doloribus nemo dolor quaerat, tempore magnam nam voluptate omnis, dolores veritatis blanditiis eius eligendi atque dolorem! Perferendis id fugiat officia non nihil accusantium necessitatibus eveniet aliquid molestias sunt.
@@ -282,37 +305,162 @@
           Unde nobis vel minima iusto, error a, aspernatur perspiciatis mollitia, culpa nostrum obcaecati esse minus dolorum ullam impedit maxime libero adipisci natus? Temporibus ipsa nostrum facilis nihil cupiditate maiores sequi!
           Aperiam quidem officiis autem cum! Obcaecati veniam asperiores nobis accusantium consequatur ea magni eligendi delectus at cupiditate enim incidunt, non fugiat, a minima eos illo suscipit aliquid vitae? Ab, fuga!</p>
           <div class="col-4"></div>
-          <div class="col-4"></div><a class="btn btn-primary"> Daha fazla ...</a>
+          <div class="col-4"></div><a class="btn btn-outline-dark"> Daha fazla ...</a>
           <div class="col-4"></div>
         </div>
       </div>
     </section>
     <!-- end parallax-->
 
+    <!-- start newspaper-->
+    <section id="newspaper">
+          <div class="container">
+            <div class="row">
+              <h2 class="myHeading">Yeni Haberler</h2>
+              <p class="line-clamp20">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea alias harum aliquid, natus voluptas ratione, dignissimos perferendis, quasi adipisci corrupti itaque ex consequatur. Velit id magnam nobis nisi corrupti repellat?
+              Quae nam ipsam ducimus amet necessitatibus praesentium pariatur, aliquid qui mollitia placeat exercitationem quod magni consequatur quibusdam consequuntur a dolorum iure earum illo doloremque. Blanditiis inventore asperiores dicta aut officia?
+              Reprehenderit id doloribus nemo dolor quaerat, tempore magnam nam voluptate omnis, dolores veritatis blanditiis eius eligendi atque dolorem! Perferendis id fugiat officia non nihil accusantium necessitatibus eveniet aliquid molestias sunt.
+              Labore provident voluptates quam accusamus explicabo doloremque alias nesciunt a consectetur ratione. Earum, qui! Facere quisquam nobis illo molestiae, dicta officiis amet culpa, autem totam voluptatum debitis excepturi provident ad.
+              Corporis saepe sit praesentium quibusdam numquam illo beatae excepturi pariatur sapiente? Ea reiciendis enim aliquid officia. Fugiat, iste maxime? Repellendus culpa ullam odit sapiente itaque id optio ex vitae facilis.
+              Culpa facilis eaque voluptate unde consequuntur autem ad iusto nostrum, sequi blanditiis distinctio obcaecati repudiandae non saepe sint ipsam placeat quos odio iure praesentium amet quis? Nesciunt, ipsam cumque? Maxime?
+              Quod veritatis cupiditate corrupti totam officia atque. Alias saepe dolore sit officia dolor sapiente tempore voluptatibus aliquam iusto est cumque aut impedit minus, accusamus sint corporis non atque quo laboriosam.
+              Eaque fugiat, quaerat quisquam nisi possimus iure libero nemo necessitatibus perferendis neque iste fugit doloremque tenetur dolores, itaque laborum consequatur, reiciendis quod saepe? Ea eaque itaque magnam illum? Pariatur, ut.
+              Nisi minima et beatae perferendis libero cupiditate magnam dolorum odit non natus, quidem omnis. Quisquam quibusdam maxime deleniti, sed doloremque praesentium necessitatibus odio eaque officia aspernatur soluta quidem, dolorem cum?
+              Laborum distinctio fugit, aspernatur fuga itaque deserunt a perferendis doloribus iusto eum sequi quia reprehenderit eveniet aut rem ipsam ducimus voluptatibus soluta quod ex dolores culpa neque? Labore, beatae pariatur.
+              Unde nobis vel minima iusto, error a, aspernatur perspiciatis mollitia, culpa nostrum obcaecati esse minus dolorum ullam impedit maxime libero adipisci natus? Temporibus ipsa nostrum facilis nihil cupiditate maiores sequi!
+              Aperiam quidem officiis autem cum! Obcaecati veniam asperiores nobis accusantium consequatur ea magni eligendi delectus at cupiditate enim incidunt, non fugiat, a minima eos illo suscipit aliquid vitae? Ab, fuga!</p>
+              <div class="col-4"></div>
+              <div class="col-4"></div><a class="btn btn-outline-dark"> Daha fazla ...</a>
+              <div class="col-4"></div>
+            </div>
+          </div>
+    </section>
+    <!-- end newspaper-->
+   
+    <!-- start blog-->
+    <section id="blog">
+      <div class="container">
+        <div class="row">
+          <h2 class="myHeading">Blog Yazılarımız</h2>
+
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img class="card-img-top" src="img/blog1.jpeg" alt="Title">
+              <div class="card-body">
+                <h4 class="card-title myHeading">Blog-1</h4>
+                <p class="card-text line-clamp4 text-dark" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione earum provident sapiente ipsum alias laboriosam accusamus sunt nemo quisquam, labore explicabo quae facilis nisi autem voluptatem nesciunt blanditiis a ducimus. 
+               </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img class="card-img-top" src="img/blog1.jpeg" alt="Title">
+              <div class="card-body">
+                <h4 class="card-title myHeading">Blog-1</h4>
+                <p class="card-text line-clamp4 text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione earum provident sapiente ipsum alias laboriosam accusamus sunt nemo quisquam, labore explicabo quae facilis nisi autem voluptatem nesciunt blanditiis a ducimus. 
+               </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img class="card-img-top" src="img/blog1.jpeg" alt="Title">
+              <div class="card-body">
+                <h4 class="card-title myHeading">Blog-1</h4>
+                <p class="card-text line-clamp4 text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione earum provident sapiente ipsum alias laboriosam accusamus sunt nemo quisquam, labore explicabo quae facilis nisi autem voluptatem nesciunt blanditiis a ducimus. 
+               </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img class="card-img-top" src="img/blog1.jpeg" alt="Title">
+              <div class="card-body">
+                <h4 class="card-title myHeading">Blog-1</h4>
+                <p class="card-text line-clamp4 text-dark">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione earum provident sapiente ipsum alias laboriosam accusamus sunt nemo quisquam, labore explicabo quae facilis nisi autem voluptatem nesciunt blanditiis a ducimus. 
+               </p>
+              </div>
+            </div>
+          </div>
+       </div>
+     </div>
+    </section>
+    <!-- end blog-->
+
+    <!-- start contact-->
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <h2 class="myHeading">İletişim</h2>
+           <div class="container">
+             <div class="row">
+              <div class="col-6">
+                <div class="row">
+                <h4>Ulaşım</h4>
+                <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34542.443481056944!2d28.96775585220534!3d41.00083976386255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab91ff8fc388f%3A0x9d8808f8802a144!2sModa%20%C4%B0skelesi!5e0!3m2!1str!2str!4v1688212575379!5m2!1str!2str" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+              </div>
+        </div>
+        <div class="col-6">
+          <h4>Bize İletin</h4>
+          <div class="row mb-4">
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="form3Example1" class="form-control" placeholder="Adınız"/>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-outline">
+                <input type="text" id="form3Example2" class="form-control" placeholder="Soyadınız"/>
+              </div>
+            </div>
+          </div>
+          <div class="form-outline mb-4">
+            <input type="email" id="form3Example3" class="form-control" placeholder="Email adresiniz" />
+          </div>
+          <div class="form-outline mb-4">
+            <input type="Message" id="form3Example4" class="form-control" placeholder="Telefon numaranız"/>
+          </div>
+          <textarea name="text" id="" cols="65" rows="6" placeholder="Mesajınızı buraya yazabilirsiniz"></textarea>
+          <button type="submit" class="btn btn-outline-dark mb-4">Gönder</button>
+
+  </div>
+      </div>
+    </section>
+   <!-- end contact-->
 
 
+   
   </main>
- 
-  <!-- end main codes -->
 
-  <!-- start footer codes -->
+   <!-- end main codes -->
+
+ <!-- start footer codes -->
   <footer id="footer id" class="bg-dark">
-   <div class="text-center p-5-dark" id="copy-right">2021- <span id="date_id"></span> &copy; Bütün Hakları Saklıdır</div>
+   <div class="text-center p-lg-5" id="copy-right">2021- <span id="date_id"></span> &copy; Bütün Hakları Saklıdır</div>
   </footer>
-  <!-- end footer codes -->
-  <a href="navbar_id" id="back_top" class="btn btn-primary"><i class="fa-solid fa-arrow-up-long"></i></a>
+ <!-- end footer codes -->
 
-  <!-- end codes -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"/>
-  </script>
+   <!-- start backtop codes -->
+    <a href="navbar_id" id="back_top" class="btn btn-primary"><i class="fa-solid fa-arrow-up-long"></i></a>
+   <!-- end bactktop codes -->
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"/>
-  </script>
+  <!-- END CODES -->
 
   <!-- external JS -->
   <script src="template.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"/>
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"/>
+  </script>
+
+
+
 </body>
 
 </html>

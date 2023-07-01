@@ -52,6 +52,9 @@ i {
     font-size: 1.5rem; /* 15*1*/
 }
 
+p{
+    color: black!important;
+}
 .myclearfix::after{
     content: "";
     display: block;
@@ -136,6 +139,9 @@ padding-top:4rem;
     margin-bottom: 3rem;
 
 }
+#messages > h4,p{
+    color: black!important;
+}
 
 #messages i{
     color: blue;
@@ -144,18 +150,51 @@ padding-top:4rem;
 
 /*parallax*/
 #parallax {background-color: transparent;
-background-image: url('./img/parallax2.jpeg');
+background-image: url('./img/parallax2.webp');
 background-size: cover;
 height: 35rem;
 padding: 2rem;
 background-repeat: no-repeat;
 background-attachment: fixed;
-
 }
 
 #parallax h2,p{
     color: rgb(27, 20, 20);
 }
+
+/*newspaperx*/
+#newspaper {
+    height: 35rem;
+    padding: 2rem;
+    background-color: transparent;
+    background-size: cover;
+    height: 35rem;
+    padding: 2rem;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    }
+    
+    #newspaper h2,p{
+        color: rgb(0, 0, 0);
+
+    }
+
+/*blog*/
+#blog {
+    background-color: rgba(75, 116, 86, 0.264);
+}
+
+/*contact*/
+#contact {background-color: transparent;
+    height: 35rem;
+    padding: 2rem;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+
+    
+
 /*footer*/
 
 footer {min-height: 10rem;
