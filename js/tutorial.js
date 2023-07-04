@@ -150,6 +150,7 @@ var number=30;
 
 console.log(number.toString+10);
 
+////////////////////////////////
 // var, let, const
 
 var data1=11;
@@ -174,3 +175,23 @@ console.log(data5);
 
 ////////////////////////////////
 // string
+let str="js Öğreniyorum js";
+console.log(str);
+console.log(str.length);
+console.log(str.trim().length);
+console.log(str.toLocaleLowerCase());
+console.log(str.toUpperCase);
+
+console.log(str.charAt(0));
+
+console.log(str.indexOf("js"));
+console.log(str.lastIndexOf("js"));
+
+console.log(str.concat("sona"));
+console.log(str.replace(str,"değiştir"));
+
+console.log(str.substring(1));
+console.log(str.substring(0-4));
+
+
+
