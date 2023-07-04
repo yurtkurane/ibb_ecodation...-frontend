@@ -193,5 +193,40 @@ console.log(str.replace(str,"değiştir"));
 console.log(str.substring(1));
 console.log(str.substring(0-4));
 
+//////////////////////////////////////////////////////////////////
+
+// Function (Normal)
+// 1 retursuz Parametresiz
+function retursuzParametresiz(){
+    console.log("deneme");
+}
+retursuzParametresiz();
+
+// 2 retursuz Parametresiz
+function retursuzParametreli(adi){ // parametre: adi
+    console.log("deneme "+adi);
+}
+retursuzParametreli("ElifY") // argüman: "ELifY"
+
+// 3 retursuz Parametresiz
+function returnluParametresiz(){
+    return "deneme55";
+}
+let result3= returnluParametresiz();
+console.log(result3);
+
+// 4 retursuz Parametresiz
+function returnluParametreli(soyadi){
+    return "deneme66 "+soyadi;
+}
+let result4= returnluParametreli("Yurtkuran");
+console.log(result4);
+
+///////////////////////////////////////////////////
+// Anoymous (Function)
+
+///////////////////////////////////////////////////
+// Arrow (Function)
+
 
 
