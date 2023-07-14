@@ -76,7 +76,7 @@ console.log(number1%number2);
 //number
 //string()
 var userData=Number(prompt("Lüten sayı giriniz"))
-console.log(userDatab+45);
+console.log(userData+45);
 
 //undefined
 var result4;
